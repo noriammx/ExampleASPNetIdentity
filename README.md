@@ -14,4 +14,15 @@ Steps for replicate this case
 1. Create a project ASP Net MVC with security. Single user
 2. Create a database called ExampleASPNetMVCIdentity
 3. Create a data model with Entity Framework, I called it Example Security Entities, but call it as you want
-4. Change the db connection in the file ApplicationDbContext, use the db conection created in the step 3
+4. Change the db connection in the file web.config, use the db custom connection like this:
+
+```xml
+
+ <!--<add name="DefaultConnection" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-AspNetWithIdentity-20190510110134.mdf;Initial Catalog=aspnet-AspNetWithIdentity-20190510110134;Integrated Security=True" providerName="System.Data.SqlClient" />-->
+    <add name="DefaultConnection" connectionString="Data Source=.;Initial Catalog=ExampleASPNetMVCIdentity;persist security info=True;user id=sa;password=Corepro1;multipleactiveresultsets=True;" providerName="System.Data.SqlClient" />
+
+``
+
+
+5. I changed the security policy for passwords, I used a very simple policy, but it's not recommended. This change is made inf file IdentityConfig
+
