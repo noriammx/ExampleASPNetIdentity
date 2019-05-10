@@ -41,12 +41,12 @@ In this case, I have created a project without security, therefore, is necessary
 06) Install-Package Microsoft.AspNet.WebApi.Client (ASP.NET Web API 2 Client)
 07) Install-Package Microsoft.Owin.Host.SystemWeb (Owin.Host.SystemWeb)
 ```
-*Remember this files can be copied of the another project created with ASP Net Identity*
+
 4. After the installation of the Nuget Packages, is necessary to update the package number 05 and all dependencies with the name it containing the word OWIN
 5. Of the folder App_Start the files IdentityConfig.cs y Startup.Auth.cs, add it to the folder App_Start of our project 
 6. Of the folder Controllers the files  AccountController.cs  y ManageController.cs add it to the folder Controllers of our project 
 7. Of the folder Models the files AccountViewModels.cs, IdentityModels.cs and ManageViewModels.cs add it to the folder Models of our project
 8. Of the folder Views the folders Accounts and Manager, add it all to the folder Views of the our project.
 9. Of the folder ..\Views\Shared the file _LoginPartial.cshtml add it to our project in the folder ..\Views\Shared or the root of the project
-10.- Copy the file Startup.cs of the roor of projecto to the root of our project
+10. Copy the file Startup.cs of the roor of projecto to the root of our project
 
