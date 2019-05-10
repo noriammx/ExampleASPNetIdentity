@@ -11,8 +11,7 @@ In this case i have used the project by default, when you create a project from 
 
 Steps for replicate this case
 
-1.- Create a project ASP Net MVC with security. Single user
-2.- Create a database called ExampleASPNetMVCIdentity
-3.- Create a data model with Entity Framework, I called it Example Security Entities, but call it as you want
-4.- Change the db connection in the file ApplicationDbContext, use the db conection created in the step 3
-5.- 
+1. Create a project ASP Net MVC with security. Single user
+2. Create a database called ExampleASPNetMVCIdentity
+3. Create a data model with Entity Framework, I called it Example Security Entities, but call it as you want
+4. Change the db connection in the file ApplicationDbContext, use the db conection created in the step 3
