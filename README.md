@@ -24,3 +24,25 @@ Steps for replicate this case
 6. Try de web app, create a user and check the tables created, if every step is correct then you will able see the tables
 7. This is the finish of the case
 
+## Case 2 - AspNetWithOutIdentity
+
+In this case, I have created a project without security, therefore, is necessary to add the asp net identity framework by way manually.
+
+1. Create a project ASP Net MVC without security
+2. Use the same database called ExampleASPNetMVCIdentity, created in the before case
+3. After to create a project is necessary add the next Nuget Packages:
+
+```
+01) Install-Package EntityFramework (Entity Framework)
+02) Install-Package EntityFramework.SqlServerCompact (Entity Framework SQL Server Compact)
+03) Install-Package Microsoft.AspNet.Identity.Core (ASP.NET Identity Core)
+04) Install-Package Microsoft.AspNet.Identity.EntityFramework (ASP.NET Identity EntityFramework)
+05) Install-Package Microsoft.AspNet.Identity.Owin (ASP.NET Identity Owin)
+06) Install-Package Microsoft.AspNet.WebApi.Client (ASP.NET Web API 2 Client)
+07) Install-Package Microsoft.Owin.Host.SystemWeb (Owin.Host.SystemWeb)
+```
+4. After the installation of the Nuget Packgages, is necessary update de packages numbre 05 and all at have it by name OWIN
+
+
+
+
