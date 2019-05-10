@@ -21,4 +21,6 @@ Steps for replicate this case
     <add name="DefaultConnection" connectionString="Data Source=.;Initial Catalog=ExampleASPNetMVCIdentity;persist security info=True;user id=sa;password=Corepro1;multipleactiveresultsets=True;" providerName="System.Data.SqlClient" />
 ```
 5. I changed the security policy for passwords, I used a very simple policy, but it's not recommended. This change is made inf file IdentityConfig
+6. Try de web app, create a user and check the tables created, if every step is correct then you will able see the tables
+7.- This is the finish of the case
 
