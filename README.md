@@ -28,6 +28,13 @@ Steps for replicate this case
 
 In this case, I have created a project without security, therefore, is necessary to add the asp net identity framework by way manually.
 
+**Remember, if you want use the custom database is necessary change the connection string as the step 4 of the case 1, like this:**
+
+```xml
+ <!--<add name="DefaultConnection" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-AspNetWithIdentity-20190510110134.mdf;Initial Catalog=aspnet-AspNetWithIdentity-20190510110134;Integrated Security=True" providerName="System.Data.SqlClient" />-->
+    <add name="DefaultConnection" connectionString="Data Source=.;Initial Catalog=ExampleASPNetMVCIdentity;persist security info=True;user id=sa;password=Corepro1;multipleactiveresultsets=True;" providerName="System.Data.SqlClient" />
+```
+
 1. Create a project ASP Net MVC without security
 2. Use the same database called ExampleASPNetMVCIdentity, created in the before case
 3. After to create a project is necessary add the next Nuget Packages:
