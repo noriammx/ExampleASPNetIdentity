@@ -59,3 +59,28 @@ In this case, I have created a project without security, therefore, is necessary
 10. Copy the file Startup.cs of the roor of projecto to the root of our project
 11. That's all, We have finished
 
+## Case 2 - Adding Custom Roles and Autorization to Controllers
+
+1. In any case you can use custom roles, but is necessary add the next code in the file Startup.Auth.cs:
+
+```c#
+  public class CustomAuthAttribute : AuthorizeAttribute
+    {
+        protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
+        {
+            if (filterContext.HttpContext.User.Identity.IsAuthenticated)
+            {
+                filterContext.Result = new RedirectResult("/Home/AccessDenied");
+            }
+            else
+            {
+                base.HandleUnauthorizedRequest(filterContext);
+            }
+        }
+    }
+```
+*The code before is a class, therefore, is necessary add to the final the class in the same file.*
+
+2. In the controllers at you want put security and autorization add de tag [Authorize] and the tag [CustomAuthAttribute(Roles = "Contabilidad")] with the custom role at you have created.
+
+
