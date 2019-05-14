@@ -3,12 +3,11 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
+//using Microsoft.Owin.Security.Google;
 using Owin;
-using AspNetWithIdentity.Models;
-using System.Web.Mvc;
+using AspNetWithOutIdentity.Models;
 
-namespace AspNetWithIdentity
+namespace AspNetWithOutIdentity
 {
     public partial class Startup
     {
@@ -64,22 +63,6 @@ namespace AspNetWithIdentity
             //    ClientId = "",
             //    ClientSecret = ""
             //});
-        }
-
-    }
-
-    public class CustomAuthAttribute : AuthorizeAttribute
-    {
-        protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
-        {
-            if (filterContext.HttpContext.User.Identity.IsAuthenticated)
-            {
-                filterContext.Result = new RedirectResult("/Home/AccessDenied");
-            }
-            else
-            {
-                base.HandleUnauthorizedRequest(filterContext);
-            }
         }
     }
 }
